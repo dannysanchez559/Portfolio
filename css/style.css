@@ -59,11 +59,8 @@ header {
   align-items: flex-end;
   padding-bottom: 20px;
 }
-header img {
-  /* border: 1px solid black; */
-}
+
 header nav ul {
-  /* border: 1px solid black; */
   width: 312px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -241,7 +238,6 @@ nav > ul li a:hover {
   grid-row-start: 1;
   grid-row-end: 2;
   align-self: center;
-  /* border: 1px solid blue; */
 }
 
 .content-list {
@@ -439,7 +435,6 @@ nav > ul li a:hover {
 @media only screen and (max-width: 1024px) {
   .container {
     max-width: 800px;
-    /* border: 1px solid red; */
 
   }
 
@@ -475,7 +470,6 @@ nav > ul li a:hover {
 @media only screen and (max-width: 768px) {
   .container {
     max-width: 600px;
-
   }
 
   .about-me {
@@ -556,14 +550,13 @@ nav > ul li a:hover {
     flex-direction: column;
     align-items: center;
   }
+
   .content-list {
     max-width: 600px;
-
   }
 
   .bottom-container {
     margin-top: 100px;
-    border: 1px solid green;
     box-sizing: content-box;
     background-image: none;
     height: auto;
@@ -677,7 +670,6 @@ nav > ul li a:hover {
   }
 
   .bottom-container {
-    border: 1px solid red;
     margin-top: 20px;
   }
 
@@ -693,7 +685,6 @@ nav > ul li a:hover {
 
   .form-button {
     align-self: stretch;
-
   }
 
 }
