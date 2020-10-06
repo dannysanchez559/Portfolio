@@ -607,8 +607,8 @@ nav > ul li a:hover {
 
 }
 
-/* iPhone 8 375px */
-@media only screen and (max-width: 375px) {
+/* iPhone 8 Plus 414px */
+@media only screen and (max-width: 414px) {
   .container {
     max-width: 375px;
   }
