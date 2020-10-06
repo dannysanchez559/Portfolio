@@ -53,8 +53,6 @@ h4 {
 header {
   box-sizing: border-box;
   height: 120px;
-  /* border: 1px solid red; */
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -124,6 +122,7 @@ nav > ul li a:hover {
   height: 105px;
   grid-template-rows: 75px 30px;
 }
+
 .projects-top h2 {
   grid-column-start: 1;
   grid-column-end: 5;
@@ -138,12 +137,14 @@ nav > ul li a:hover {
   justify-content: center;
   align-items: center;
 }
+
 .slider-div {
   background-image: url("../images/Rectangle 1project switcher.svg");
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 0;
 }
+
 .slider-div ul {
   list-style-type: none;
   display: flex;
@@ -152,17 +153,20 @@ nav > ul li a:hover {
   align-items: center;
   padding: 0;
 }
+
 .slider-div ul li {
   width: 76px;
   height: 35px;
   margin: 0;
   padding: 0;
 }
+
 .slider-div ul > :first-child {
   background-image: url("../images/Rectangle 2project switcher.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .slider-div ul > :first-child > a {
   position: relative;
   left: 19px;
@@ -229,8 +233,8 @@ nav > ul li a:hover {
   grid-template-columns: repeat(12, 60px);
   grid-template-rows: 100px 400px;
   grid-gap: 30px;
-  /* border: 1px solid blue; */
 }
+
 .content-top {
   grid-column-start: 1;
   grid-column-end: 12;
@@ -239,6 +243,7 @@ nav > ul li a:hover {
   align-self: center;
   /* border: 1px solid blue; */
 }
+
 .content-list {
   grid-column-start: 1;
   grid-column-end: 12;
@@ -248,6 +253,7 @@ nav > ul li a:hover {
   grid-template-columns: repeat(3, 330px);
   grid-gap: 30px;
   overflow: auto;
+  overflow-y: hidden;
 }
 
 .content-box {
@@ -287,8 +293,6 @@ nav > ul li a:hover {
   height: 450px;
   align-self: center;
   justify-content: center;
-
-  /* border: 2px solid red; */
   display: grid;
   grid-template-columns: repeat(12, 60px);
   grid-template-rows: 50px 200px 170px;
@@ -303,7 +307,6 @@ nav > ul li a:hover {
 .contact * {
   padding: 0;
   margin: 0;
-  /* border: 1px solid black; */
 }
 
 .contact h2 {
@@ -324,7 +327,6 @@ nav > ul li a:hover {
   background-color: #1B2A5A;
   color: #FFF;
   border-radius: 5px;
-
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
