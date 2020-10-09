@@ -4,6 +4,7 @@ html, body {
   font-style: normal;
   font-size: 18px;
   line-height: 26px;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -58,6 +59,7 @@ header {
   justify-content: space-between;
   align-items: flex-end;
   padding-bottom: 20px;
+
 }
 
 header nav ul {
@@ -71,11 +73,35 @@ header nav ul {
 }
 
 ul li a {
+  position: relative;
   text-decoration: none;
   color: #000;
 }
+
 nav > ul li a:hover {
-  border-bottom: 4px solid #3756C3;
+  right: 0;
+}
+
+nav > ul li a:hover:after {
+  right: 0;
+}
+
+nav > ul li a:after {
+  /* border-bottom: 4px solid #3756C3; */
+
+  border-radius: 1em;
+  border-top: 3px solid #3756C3;
+  content: "";
+  position: absolute;
+    right: 100%;
+    bottom: -5px;
+    left: 0;
+  transition: right .6s cubic-bezier(0,.5,0,1),
+ border-color .4s ease-out;
+}
+
+nav > ul li a:hover:after {
+  right: 0;
 }
 
 .about-me {
@@ -107,7 +133,6 @@ nav > ul li a:hover {
   "img1 img1 img1 img1 img1 d1 d1 d1 d1 d1 d1 d1"
   "d2 d2 d2 d2 d2 d2 img2 img2 img2 img2 img2 img2";
 }
-
 
 .projects-top {
   grid-area: t;
