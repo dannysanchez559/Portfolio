@@ -52,6 +52,8 @@ h4 {
 
 #header-box {
   /* border: 1px solid red; */
+  box-sizing: border-box;
+  height: 90px;
   width: 100%;
   position: -webkit-sticky; /* Safari & IE */
   position: sticky;
@@ -70,9 +72,6 @@ header {
   max-width: 1050px;
   margin: 0 auto;
   padding-top: 60px;
-
-
-
 }
 
 header nav ul {
