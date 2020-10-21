@@ -10,7 +10,6 @@ html, body {
 main {
   background-image: url("../images/background design 1 - desktop.svg");
   background-repeat: no-repeat;
-
 }
 
 .container {
@@ -21,7 +20,6 @@ main {
   margin: 0 auto;
   overflow-x: hidden;
 }
-
 
 h1, h2, h3 {
   font-family: 'Roboto Condensed', sans-serif;
@@ -52,14 +50,28 @@ h4 {
   font-weight: 700;
 }
 
+#header-box {
+  /* border: 1px solid red; */
+  width: 100%;
+  position: -webkit-sticky; /* Safari & IE */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
 header {
   box-sizing: border-box;
-  height: 120px;
+  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
   padding-bottom: 20px;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding-top: 60px;
+
+
 
 }
 
@@ -71,6 +83,7 @@ header nav ul {
   margin: 0;
   padding-right: 10px;
   list-style-type: none;
+  align-items: center;
 }
 
 ul li a {
@@ -257,6 +270,57 @@ nav > ul li a:hover:after {
   grid-template-rows: 100px 400px;
   grid-gap: 30px;
 }
+
+/* for left and right scroll buttons */
+#button-overlay {
+  grid-column-start: 1;
+  grid-column-end: 12;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  display: block;
+  overflow: none;
+  box-sizing: border-box;
+
+  /* border: 2px solid red; */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  background-color: rgba(0,0,0,0); /* Black background with opacity */
+  display: flex;
+  align-items: center;
+}
+
+.button-container {
+  /* border: 1px solid blue; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.scroll-button {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0,0,0,0.1);
+  /* border: 1px solid white; */
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.scroll-button img {
+  /* scale: 0.3; */
+  -webkit-transform:scale(0.3, 0.3); /* for safari */
+}
+
+.scroll-button:hover {
+  background-color: rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
 
 .content-top {
   grid-column-start: 1;
@@ -464,6 +528,10 @@ nav > ul li a:hover:after {
 
   }
 
+  #navHeader {
+    max-width: 800px;
+  }
+
   .projects {
     grid-template-areas:
     "t t t t t t t t t t t t"
@@ -481,6 +549,11 @@ nav > ul li a:hover:after {
 
   }
 
+  .button-container {
+    max-width: 750px;
+    padding: 0 20px;
+  }
+
   .bottom-container {
     background-position: 400px; center;
   }
@@ -495,6 +568,10 @@ nav > ul li a:hover:after {
 /* IPAD Mini 768px */
 @media only screen and (max-width: 768px) {
   .container {
+    max-width: 600px;
+  }
+
+  #navHeader {
     max-width: 600px;
   }
 
@@ -581,6 +658,11 @@ nav > ul li a:hover:after {
     max-width: 600px;
   }
 
+  .button-container {
+    max-width: 550px;
+    padding: 0 20px;
+  }
+
   .bottom-container {
     margin-top: 100px;
     box-sizing: content-box;
@@ -639,12 +721,22 @@ nav > ul li a:hover:after {
     max-width: 375px;
   }
 
+  #navHeader {
+    box-sizing: border-box;
+    height: 100px;
+    max-width: 375px;
+    padding-top: 15px;
+  }
+
   header {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-top: 30px;
+    box-sizing: border-box;
+    height: 75px;
+    padding: 0;
   }
+
 
   header nav ul {
     padding: 0;
@@ -692,6 +784,16 @@ nav > ul li a:hover:after {
 
   .content-list {
     max-width: 335px;
+    padding: 0 20px;
+  }
+
+  #button-overlay {
+    align-items: flex-end;
+    padding-bottom: 80px;
+  }
+
+  .button-container {
+    max-width: 320px;
     padding: 0 20px;
   }
 

@@ -2,6 +2,9 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
+  <!-- for sticky header -->
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
   <!-- for smooth scrolling across multiple browsers -->
   <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
   <script src="script.js"></script>
@@ -19,24 +22,27 @@
 </head>
 <body>
   <main>
-    <div class="container">
+    <a name="top"></a>
+    <div id="header-box">
 
-      <header id="top">
+
+      <header id="navHeader">
         <img src="images/header logo.svg" alt="">
 
         <nav>
           <ul>
-            <li><a onclick="scrollSetup(this)" href="#about">About</a></li>
+            <li><a onclick="scrollSetup(this)" href="#top">About</a></li>
             <li><a onclick="scrollSetup(this)" href="#projects">Projects</a></li>
             <li><a onclick="scrollSetup(this)" href="#content">Content</a></li>
             <li><a onclick="scrollSetup(this)" href="#contact">Contact</a></li>
           </ul>
         </nav>
       </header>
+    </div>
 
+    <div class="container">
       <section class="about-me">
         <div>
-          <a name="about"></a>
           <h1>I am a <span>Front-end Developer</span></h1>
           <p>Vestibulum fermentum, mattis neque leo. Curabitur amet vehicula et diam
             cras arcu nisl. Enim accumsan, duis in sagittis congue at sollicitudin
@@ -104,19 +110,23 @@
                 <h2>Content</h2>
               </div>
 
-              <div class="content-list">
-
-                <div class="content-box">
-                  <h3>How Dave Ramsey Became My Hero</h3>
-                  <p>Fames arcu, id odio a non, amet. Ut ligula amet arcu neque tortor.
-                    Feugiat consequat bibendum nec, mattis feugiat gravida commodo quis.
-                    Adipiscing sapien, neque ultricies massa egestas feugiat neque eget
-                    mi. Lacus vestibulum vestibulum tortor interdum. </p>
-                    <a href="#" class="content-button">Read More</a>
+              <div id="button-overlay">
+                <div class="button-container">
+                  <div onclick="contentScroll(this)" class="scroll-button" id="left-button">
+                    <img src="images/Left-Button.svg" alt="">
                   </div>
 
+                  <div onclick="contentScroll(this)" class="scroll-button" id="right-button">
+                    <img src="images/Right-Button.svg" alt="">
+                  </div>
+                </div>
+
+              </div>
+
+                <div class="content-list">
+
                   <div class="content-box">
-                    <h3>Why I Think Tesla Will Reign the Future</h3>
+                    <h3>How Dave Ramsey Became My Hero</h3>
                     <p>Fames arcu, id odio a non, amet. Ut ligula amet arcu neque tortor.
                       Feugiat consequat bibendum nec, mattis feugiat gravida commodo quis.
                       Adipiscing sapien, neque ultricies massa egestas feugiat neque eget
@@ -125,7 +135,7 @@
                     </div>
 
                     <div class="content-box">
-                      <h3>Books that Changed My Thinking</h3>
+                      <h3>Why I Think Tesla Will Reign the Future</h3>
                       <p>Fames arcu, id odio a non, amet. Ut ligula amet arcu neque tortor.
                         Feugiat consequat bibendum nec, mattis feugiat gravida commodo quis.
                         Adipiscing sapien, neque ultricies massa egestas feugiat neque eget
@@ -133,9 +143,19 @@
                         <a href="#" class="content-button">Read More</a>
                       </div>
 
-                    </div>
+                      <div class="content-box">
+                        <h3>Books that Changed My Thinking</h3>
+                        <p>Fames arcu, id odio a non, amet. Ut ligula amet arcu neque tortor.
+                          Feugiat consequat bibendum nec, mattis feugiat gravida commodo quis.
+                          Adipiscing sapien, neque ultricies massa egestas feugiat neque eget
+                          mi. Lacus vestibulum vestibulum tortor interdum. </p>
+                          <a href="#" class="content-button">Read More</a>
+                        </div>
+
+                      </div>
                   </section>
-                </div>
+              </div>
+
                 <div class="bottom-container">
                   <section class="contact">
                     <div class="contact-top">
