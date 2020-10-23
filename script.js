@@ -1,11 +1,12 @@
-// for sticky nav
+
+// for sticky nav header
 $(document).scroll(function() {
     var y = $(document).scrollTop(), //get page y value
         header = $("#header-box"); // your div id
-    if(y >= 100)  {
+    if(y >= 10)  {
         header.css({
           "background-color" : "rgba(255, 255, 255, 0.98)",
-          "transition" : "background-color 0.5s ease 0.3s"
+          "transition" : "background-color 0.3s ease"
           });
     } else {
         header.css({
@@ -41,19 +42,115 @@ function scrollSetup(element) {
   }
 }
 
-function contentScroll(element) {
-  var button = element.id;
-  var content = document.querySelector('.content-list');
 
-  // scroll left
-  if (button == "left-button") {
-    // console.log(button.id)
-    content.scrollBy({ left: -360, top: 0, behavior: 'smooth' });
+
+window.onload = function() {
+
+  content = document.getElementById('content-list');
+  contentListWidth = content.offsetWidth; // 960px, 800px, 600px, 375px
+
+  leftButton = document.getElementById('left-button');
+  rightButton = document.getElementById('right-button');
+
+  // if all the way to left, disable left scroll content button
+  if (content.scrollLeft == 0) {
+    // hide left button
+    leftButton.style.zIndex = "0";
   }
-  // scroll right
   else {
-    content.scrollBy({ left: 360, top: 0, behavior: 'smooth' });
-    // console.log(button.id)
+    // show left button
+    leftButton.style.zIndex = "10";
+  }
+
+}
+
+// when user clicks left or right buttons
+function contentScroll(element) {
+
+  var button = element.id;
+
+  // user pressed left button
+  if (button == "left-button") {
+    content.scrollBy({ left: -330, top: 0, behavior: 'smooth' }); // was 360
+    console.log(`left: ${content.scrollLeft}`);
+
+    // show right button
+    rightButton.style.zIndex = "10";
+
+    // disable left button once reached the end
+    // contentListWidth: 960px, 800px, 600px, 335px
+    switch (contentListWidth) {
+      case 960:
+      // disable left button
+      leftButton.style.zIndex = "0";
+      break;
+
+      case 800:
+      // disable left button
+      leftButton.style.zIndex = "0";
+      break;
+
+      case 600:
+      // disable left button once scrollLeft is less equal to 360
+        if (content.scrollLeft <= 360) {
+          leftButton.style.zIndex = "0";
+        }
+      break;
+
+      case 330:
+      // disable right button once scrollLeft is greater equal to 360
+        if(content.scrollLeft <= 330) {
+          leftButton.style.zIndex = "0";
+        }
+      break;
+
+      default:
+      leftButton.style.zIndex = "10";
+      rightButton.style.zIndex = "10";
+    }
+
+  }
+
+  // user pressed scroll right button
+  else {
+    content.scrollBy({ left: 330, top: 0, behavior: 'smooth' }); // was 360
+    console.log(`right: ${content.scrollLeft}`);
+
+    // show left button
+    leftButton.style.zIndex = "10";
+
+    // disable right button once reached the end
+    // contentListWidth: 960px, 800px, 600px, 335px
+    switch (contentListWidth) {
+      case 960:
+      // disable right button
+        rightButton.style.zIndex = "0";
+      break;
+
+      case 800:
+      // disable right button
+        rightButton.style.zIndex = "0";
+      break;
+
+      case 600:
+      // disable right button once scrollLeft is greater equal to 360
+        if (content.scrollLeft >= 90) {
+          rightButton.style.zIndex = "0";
+        }
+      break;
+
+      case 330:
+      // disable right button once scrollLeft is greater equal to 335
+        if (content.scrollLeft >= 330) {
+          rightButton.style.zIndex = "0";
+        }
+      break;
+
+      default:
+        leftButton.style.zIndex = "10";
+        rightButton.style.zIndex = "10";
+    }
+
   }
 
 }

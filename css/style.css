@@ -18,7 +18,7 @@ main {
   justify-content: center;
   max-width: 1050px;
   margin: 0 auto;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 h1, h2, h3 {
@@ -100,17 +100,15 @@ nav > ul li a:hover:after {
 }
 
 nav > ul li a:after {
-  /* border-bottom: 4px solid #3756C3; */
-
   border-radius: 1em;
   border-top: 3px solid #3756C3;
   content: "";
   position: absolute;
-    right: 100%;
-    bottom: -5px;
-    left: 0;
+  right: 100%;
+  bottom: -5px;
+  left: 0;
   transition: right .6s cubic-bezier(0,.5,0,1),
- border-color .4s ease-out;
+  border-color .4s ease-out;
 }
 
 nav > ul li a:hover:after {
@@ -290,7 +288,6 @@ nav > ul li a:hover:after {
 }
 
 .button-container {
-  /* border: 1px solid blue; */
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -305,13 +302,10 @@ nav > ul li a:hover:after {
   width: 60px;
   height: 60px;
   background-color: rgba(0,0,0,0.1);
-  /* border: 1px solid white; */
   border-radius: 50%;
-  z-index: 10;
 }
 
 .scroll-button img {
-  /* scale: 0.3; */
   -webkit-transform:scale(0.3, 0.3); /* for safari */
 }
 
@@ -320,6 +314,13 @@ nav > ul li a:hover:after {
   cursor: pointer;
 }
 
+#left-button {
+  z-index: 10;
+}
+
+#right-button {
+  z-index: 10;
+}
 
 .content-top {
   grid-column-start: 1;
@@ -329,7 +330,7 @@ nav > ul li a:hover:after {
   align-self: center;
 }
 
-.content-list {
+#content-list {
   grid-column-start: 1;
   grid-column-end: 12;
   grid-row-start: 2;
@@ -337,8 +338,8 @@ nav > ul li a:hover:after {
   display: grid;
   grid-template-columns: repeat(3, 330px);
   grid-gap: 30px;
-  overflow: auto;
-  overflow-y: hidden;
+  overflow: hidden;
+  z-index: 2;
 }
 
 .content-box {
@@ -518,13 +519,13 @@ nav > ul li a:hover:after {
   background-color: #2846B0;
 }
 
+
 /* ------- RESPONSIVE LAYOUT ------- */
 
 /* IPAD PRO 1024px */
 @media only screen and (max-width: 1024px) {
   .container {
     max-width: 800px;
-
   }
 
   #navHeader {
@@ -543,7 +544,7 @@ nav > ul li a:hover:after {
     height: auto;
   }
 
-  .content-list {
+  #content-list {
     max-width: 800px;
 
   }
@@ -555,6 +556,11 @@ nav > ul li a:hover:after {
 
   .bottom-container {
     background-position: 400px; center;
+  }
+
+  .scroll-button:hover {
+    background-color: rgba(0,0,0,0.1);
+    cursor: auto;
   }
 
   .contact {
@@ -653,7 +659,7 @@ nav > ul li a:hover:after {
     align-items: center;
   }
 
-  .content-list {
+  #content-list {
     max-width: 600px;
   }
 
@@ -736,7 +742,6 @@ nav > ul li a:hover:after {
     padding: 0;
   }
 
-
   header nav ul {
     padding: 0;
   }
@@ -777,17 +782,23 @@ nav > ul li a:hover:after {
     padding: 10px 0;
   }
 
+  .content {
+    max-width: 330px;
+    margin: 0 auto;
+  }
+
   .content-top {
     max-width: 335px;
   }
 
-  .content-list {
-    max-width: 335px;
-    padding: 0 20px;
+  #content-list {
+    max-width: 330px;
+    grid-gap: 0;
   }
 
   #button-overlay {
     align-items: flex-end;
+    max-width: 330px;
     padding-bottom: 80px;
   }
 
