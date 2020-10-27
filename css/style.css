@@ -87,6 +87,9 @@ header nav ul {
 
 ul li a {
   position: relative;
+  display: block;
+  box-sizing: border-box;
+  height: 29px;
   text-decoration: none;
   color: #000;
 }
@@ -113,6 +116,13 @@ nav > ul li a:after {
 
 nav > ul li a:hover:after {
   right: 0;
+}
+
+nav ul li a.current {
+  border-bottom: 3px solid #3756C3;
+  /* right: 100%; */
+  /* bottom: -5px; */
+  left: 0;
 }
 
 .about-me {
@@ -558,7 +568,7 @@ nav > ul li a:hover:after {
     background-position: 400px; center;
   }
 
-  .scroll-button:hover {
+  .scroll-button:hover, .scroll-button:active {
     background-color: rgba(0,0,0,0.1);
     cursor: auto;
   }

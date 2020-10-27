@@ -7,7 +7,7 @@
 
   <!-- for smooth scrolling across multiple browsers -->
   <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-  <script src="script.js"></script>
+  <script defer src="script.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
 
@@ -22,7 +22,7 @@
 </head>
 <body>
   <main>
-    <a name="top"></a>
+    <a name="about-me"></a>
     <div id="header-box">
 
       <header id="navHeader">
@@ -30,7 +30,7 @@
 
         <nav>
           <ul>
-            <li><a onclick="scrollSetup(this)" href="#top">About</a></li>
+            <li><a onclick="scrollSetup(this)" href="#about-me">About</a></li>
             <li><a onclick="scrollSetup(this)" href="#projects">Projects</a></li>
             <li><a onclick="scrollSetup(this)" href="#content">Content</a></li>
             <li><a onclick="scrollSetup(this)" href="#contact">Contact</a></li>
@@ -40,7 +40,7 @@
     </div>
 
     <div class="container">
-      <section class="about-me">
+      <section class="about-me" id="about-me">
         <div>
           <h1>I am a <span>Front-end Developer</span></h1>
           <p>Vestibulum fermentum, mattis neque leo. Curabitur amet vehicula et diam
@@ -54,7 +54,7 @@
 
         </section>
 
-        <section class="projects">
+        <section class="projects" id="projects">
 
           <div class="projects-top">
             <h2>Recent Projects</h2>
@@ -103,7 +103,7 @@
 
             </section>
 
-            <section class="content">
+            <section class="content" id="content">
               <div class="content-top">
                 <a name="content"></a>
                 <h2>Content</h2>
@@ -156,7 +156,7 @@
               </div>
 
                 <div class="bottom-container">
-                  <section class="contact">
+                  <section class="contact" id="contact">
                     <div class="contact-top">
                       <a name="contact"></a>
                       <h2>Get in touch today!</h2>

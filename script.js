@@ -42,8 +42,31 @@ function scrollSetup(element) {
   }
 }
 
+// handle highlighting nav buttons when user scrolls down
+let mainNavLinks = document.querySelectorAll("nav ul li a");
+let mainSections = document.querySelectorAll("main section");
 
+// console.dir(mainNavLinks, {depth: null});
+// console.dir(mainSections, {depth: null});
 
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add("current");
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+// left, right contentlist scroll implementation for different sized screens
 window.onload = function() {
 
   content = document.getElementById('content-list');
@@ -64,7 +87,7 @@ window.onload = function() {
 
 }
 
-// when user clicks left or right buttons
+// handle when user clicks left or right buttons
 function contentScroll(element) {
 
   var button = element.id;
