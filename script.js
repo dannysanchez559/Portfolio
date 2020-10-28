@@ -60,8 +60,10 @@ window.addEventListener("scroll", event => {
       section.offsetTop + section.offsetHeight > fromTop
     ) {
       link.classList.add("current");
+      link.classList.add("noHover");
     } else {
       link.classList.remove("current");
+      link.classList.remove("noHover");
     }
   });
 });

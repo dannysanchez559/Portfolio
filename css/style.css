@@ -85,44 +85,28 @@ header nav ul {
   align-items: center;
 }
 
-ul li a {
+nav ul li a {
   position: relative;
-  display: block;
+  display: inline-block;
   box-sizing: border-box;
-  height: 29px;
   text-decoration: none;
   color: #000;
+  height: 30px;
 }
 
-nav > ul li a:hover {
+nav ul li a:hover, nav ul li a:focus {
   right: 0;
-}
-
-nav > ul li a:hover:after {
-  right: 0;
-}
-
-nav > ul li a:after {
-  border-radius: 1em;
-  border-top: 3px solid #3756C3;
-  content: "";
-  position: absolute;
-  right: 100%;
-  bottom: -5px;
-  left: 0;
-  transition: right .6s cubic-bezier(0,.5,0,1),
-  border-color .4s ease-out;
-}
-
-nav > ul li a:hover:after {
-  right: 0;
+  border-bottom: 3px solid #3756C3;
+  padding-bottom: 1px;
 }
 
 nav ul li a.current {
   border-bottom: 3px solid #3756C3;
-  /* right: 100%; */
-  /* bottom: -5px; */
-  left: 0;
+  padding-bottom: 1px;
+}
+
+nav ul li a.noHover {
+  pointer-events: none;
 }
 
 .about-me {
