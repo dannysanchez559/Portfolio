@@ -65,6 +65,8 @@ window.addEventListener("scroll", event => {
       link.classList.remove("current");
       link.classList.remove("noHover");
     }
+
+
   });
 });
 

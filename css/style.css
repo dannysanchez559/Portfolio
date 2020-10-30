@@ -85,6 +85,10 @@ header nav ul {
   align-items: center;
 }
 
+ul li a {
+  text-decoration: none;
+}
+
 nav ul li a {
   position: relative;
   display: inline-block;
@@ -94,7 +98,7 @@ nav ul li a {
   height: 30px;
 }
 
-nav ul li a:hover, nav ul li a:focus {
+nav ul li a:hover, nav ul li a:focus, nav ul li a:touch {
   right: 0;
   border-bottom: 3px solid #3756C3;
   padding-bottom: 1px;
@@ -106,7 +110,7 @@ nav ul li a.current {
 }
 
 nav ul li a.noHover {
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 .about-me {
