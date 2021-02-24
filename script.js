@@ -62,7 +62,7 @@ function scrollSetup(element) {
     document.querySelector('.contact').scrollIntoView({ behavior: 'smooth' });
     break;
 
-    default: document.querySelector('.about').scrollIntoView({ behavior: 'smooth' });
+    // default: document.querySelector('.about').scrollIntoView({ behavior: 'smooth' });
 
   }
 }
