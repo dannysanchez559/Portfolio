@@ -15,6 +15,31 @@ $(document).scroll(function() {
     }
 });
 
+// handle highlighting nav buttons when user scrolls down
+let mainNavLinks = document.querySelectorAll("nav ul li a");
+let mainSections = document.querySelectorAll("main section");
+
+// console.dir(mainNavLinks, {depth: null});
+// console.dir(mainSections, {depth: null});
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add("current");
+
+    } else {
+      link.classList.remove("current");
+    }
+
+  });
+});
+
 // nav smooth scrolling
 function scrollSetup(element) {
   const tagName = element.innerHTML;
@@ -41,34 +66,6 @@ function scrollSetup(element) {
 
   }
 }
-
-// handle highlighting nav buttons when user scrolls down
-let mainNavLinks = document.querySelectorAll("nav ul li a");
-let mainSections = document.querySelectorAll("main section");
-
-// console.dir(mainNavLinks, {depth: null});
-// console.dir(mainSections, {depth: null});
-
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
-
-  mainNavLinks.forEach(link => {
-    let section = document.querySelector(link.hash);
-
-    if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
-    ) {
-      link.classList.add("current");
-      link.classList.add("noHover");
-    } else {
-      link.classList.remove("current");
-      link.classList.remove("noHover");
-    }
-
-
-  });
-});
 
 // left, right contentlist scroll implementation for different sized screens
 window.onload = function() {
