@@ -125,20 +125,6 @@ nav ul li a.current {
   color: #3756C3;
 }
 
-.projects {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 120px 320px 320px;
-  grid-gap: 30px;
-  padding-top: 65px;
-  padding-bottom: 65px;
-  grid-template-areas:
-  "t t t t t t t t t t t t"
-  "img1 img1 img1 img1 img1 d1 d1 d1 d1 d1 d1 d1"
-  "d2 d2 d2 d2 d2 d2 img2 img2 img2 img2 img2 img2";
-}
-
 .projects-top {
   grid-area: t;
   display: grid;
@@ -224,10 +210,28 @@ nav ul li a.current {
   margin-top: 0;
 }
 
+.projects {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 120px 320px 320px;
+  grid-gap: 30px;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  grid-template-areas:
+  "t t t t t t t t t t t t"
+  "img1 img1 img1 img1 img1 img1 d1 d1 d1 d1 d1 d1"
+  "d2 d2 d2 d2 d2 d2 img2 img2 img2 img2 img2 img2";
+}
+
 .image-box1, .image-box2 {
   filter: drop-shadow(10px 14px 0px #EDF1FE);
   border-radius: 8px;
+  /* border: 1px solid green; */
+}
 
+.image-box1 img, .image-box2 img {
+  width: 95%;
 }
 
 .image-box1 {
@@ -236,10 +240,11 @@ nav ul li a.current {
 
 .project-description1, .project-description2 {
   max-width: 510px;
+  /* border: 1px solid red; */
 }
 
 .project-description1 *, .project-description2 * {
-  padding: 0;
+  padding: 10px;
   margin: 0 0 18px 0;
 }
 
@@ -257,6 +262,7 @@ nav ul li a.current {
 
 .content {
   padding-top: 50px;
+  border: 1px solid red;
   display: grid;
   grid-template-columns: repeat(12, 60px);
   grid-template-rows: 100px 400px;
