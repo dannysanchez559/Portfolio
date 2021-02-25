@@ -675,6 +675,7 @@ nav ul li a.current {
 
   .contact {
     max-width: 600px;
+    padding-top: 120px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -736,12 +737,18 @@ nav ul li a.current {
     padding: 0;
   }
 
+  #header-box {
+    height: 100px;
+
+}
+
   header nav ul {
     padding: 0;
   }
 
   .about-me {
     max-width: 335px;
+    padding-top: 75px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -776,12 +783,18 @@ nav ul li a.current {
     padding: 10px 0;
   }
 
+  .projects-top {
+    padding-top: 25px;
+
+  }
+
   .content {
     max-width: 330px;
     margin: 0 auto;
   }
 
   .content-top {
+    padding-top: 75px;
     max-width: 335px;
   }
 
