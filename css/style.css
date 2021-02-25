@@ -262,7 +262,6 @@ nav ul li a.current {
 
 .content {
   padding-top: 50px;
-  border: 1px solid red;
   display: grid;
   grid-template-columns: repeat(12, 60px);
   grid-template-rows: 100px 400px;
@@ -272,15 +271,12 @@ nav ul li a.current {
 /* for left and right scroll buttons */
 #button-overlay {
   grid-column-start: 1;
-  grid-column-end: 12;
+  grid-column-end: 13;
   grid-row-start: 2;
   grid-row-end: 3;
-
   display: block;
   overflow: none;
   box-sizing: border-box;
-
-  /* border: 2px solid red; */
   width: 100%; /* Full width (cover the whole page) */
   height: 100%; /* Full height (cover the whole page) */
   background-color: rgba(0,0,0,0); /* Black background with opacity */
@@ -333,7 +329,7 @@ nav ul li a.current {
 
 #content-list {
   grid-column-start: 1;
-  grid-column-end: 12;
+  grid-column-end: 13;
   grid-row-start: 2;
   grid-row-end: 3;
   display: grid;
@@ -356,6 +352,7 @@ nav ul li a.current {
   font-size: 14px;
   line-height: 22px;
 }
+
 .content-box * {
   margin: 0;
   padding-top: 5px;
