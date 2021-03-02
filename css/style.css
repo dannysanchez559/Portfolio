@@ -214,7 +214,7 @@ nav ul li a.current {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 120px 320px 320px;
+  grid-template-rows: 120px auto auto; /* original height: 120px 320px 320px */
   grid-gap: 30px;
   padding-top: 65px;
   padding-bottom: 65px;
@@ -226,12 +226,13 @@ nav ul li a.current {
 
 .image-box1, .image-box2 {
   filter: drop-shadow(10px 14px 0px #EDF1FE);
-  border-radius: 8px;
-  /* border: 1px solid green; */
+  border-radius: 15px;
 }
 
 .image-box1 img, .image-box2 img {
-  width: 95%;
+  max-width: 80%;
+  height: auto;
+  border-radius: 5%;
 }
 
 .image-box1 {
