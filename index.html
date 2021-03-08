@@ -44,9 +44,9 @@
         <div>
           <h1>I am an <span>iOS Developer</span></h1>
           <p>Hi, my name is Daniel Sanchez. And I am a self taught iOS Developer
-          located in central California. I enjoy creating things, whether it's from code, or materials.
-          I am also very thirsty for knowledge, and find satisfaction in fixing all things that were once broken.
-          I also truly appreciate an elegant, simple UI.
+          located in California. I enjoy creating things, whether it's from code, or materials.
+          I am also thirsty for knowledge, and find satisfaction in fixing all things that were once broken.
+          I also truly appreciate an elegant and simple UI.
           Catch me on Github and LinkedIn.
 
            </p>
@@ -80,9 +80,9 @@
           </div>
           <div class="project-description1">
             <h4>Spoilist</h4>
-            <p>My first iOS App! Spoilist lets a user enter grocery items with manually
-              entered expiration dates or auto completed recommendations.
-            <br />Spoilist will send a notification before items run out of time in order to save money and reduce waste!
+            <p>My first iOS App! Spoilist lets a user add grocery items with user specified
+               expiration dates or auto completed recommendations.
+            <br />Spoilist will send a notification before items run out of time in order to reduce spoilage and save money!
            </p>
            <p>
              Technologies implemented:
@@ -94,7 +94,7 @@
                <li>Constraints and certain UI elements coded manually without Storyboard UI</li>
              </ul>
            </p>
-              <a href="#" class="project-button">View Project</a>
+              <a href="#" class="project-button" data-toggle="modal" data-target="#portfolioModal1">View Project</a>
             </div>
 
             <div class="project-description2">
@@ -198,6 +198,46 @@
 
                   </div>
 
+                  <!-- Portfolio Modals-->
+                  <!-- Portfolio Modal 1-->
+                  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+                      <div class="modal-dialog modal-xl" role="document">
+                          <div class="modal-content">
+                              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                              </button>
+                              <div class="modal-body text-center">
+                                  <div class="container">
+                                      <div class="row justify-content-center">
+                                          <div class="col-lg-8">
+                                              <!-- Portfolio Modal - Title-->
+                                              <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Log Cabin</h2>
+                                              <!-- Icon Divider-->
+                                              <div class="divider-custom">
+                                                  <div class="divider-custom-line"></div>
+                                                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                                  <div class="divider-custom-line"></div>
+                                              </div>
+                                              <!-- Portfolio Modal - Image-->
+                                              <img class="img-fluid rounded mb-5" src="images/Spoilist Portfolio Screenshot Cropped.png" alt="Spoilist Demo" />
+                                              <!-- Portfolio Modal - Text-->
+                                              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                              <button class="btn btn-primary" data-dismiss="modal">
+                                                  <i class="fas fa-times fa-fw"></i>
+                                                  Close Window
+                                              </button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
                 </main>
+
+                <!-- Bootstrap core JS-->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+
               </body>
               </html>
