@@ -228,7 +228,6 @@ nav ul li a.current {
 .image-box1, .image-box2 {
   filter: drop-shadow(10px 14px 0px #EDF1FE);
   border-radius: 0.5rem;
-  /* border: 1px solid blue; */
 }
 
 .image-box1 img, .image-box2 img {
@@ -242,19 +241,11 @@ nav ul li a.current {
 }
 
 .project-description1, .project-description2 {
-  /* max-width: 510px; */
   padding: 10px;
-  /* border: 1px solid red; */
 }
 
 .project-description1 > h4, .project-description2 > h4 {
   margin: 0;
-}
-
-.project-description1 *, .project-description2 * {
-  /* margin: 0; */
-  /* padding: 10px; */
-  /* margin: 0 0 18px 0; */
 }
 
 .project-description1 {
@@ -270,7 +261,7 @@ nav ul li a.current {
 }
 
 
-/* Modal Project Popover */
+/****** Modal Project Popover ******/
 
 .modal-open {
   overflow: hidden;
@@ -616,7 +607,7 @@ nav ul li a.current {
   }
 
   .img-fluid {
-    max-width: 100%;
+    max-width: 325px;
     height: auto;
   }
 
