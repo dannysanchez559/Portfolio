@@ -216,7 +216,7 @@ nav ul li a.current {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 100px auto auto; /* original height: 120px 320px 320px */
-  grid-gap: 30px;
+  grid-gap: 40px;
   padding-top: 65px;
   padding-bottom: 65px;
   grid-template-areas:
@@ -231,7 +231,7 @@ nav ul li a.current {
 }
 
 .image-box1 img, .image-box2 img {
-  max-width: 95%;
+  max-width: 90%;
   height: auto;
   border-radius: 5%;
 }
@@ -248,9 +248,9 @@ nav ul li a.current {
   padding: 10px;
 }
 
-.project-description1 > h4, .project-description2 > h4 {
+/* .project-description1 > h4, .project-description2 > h4 {
   margin: 0;
-}
+} */
 
 .project-description1 {
   grid-area: d1;
@@ -533,6 +533,7 @@ nav ul li a.current {
   .row {
     display: flex;
     flex-wrap: nowrap;
+    flex-direction: row;
     margin-right: -1.5rem;
     margin-left: -1.5rem;
   }
@@ -593,7 +594,7 @@ nav ul li a.current {
 
   .mb-5,
   .my-5 {
-    margin-bottom: 3rem !important;
+    margin-bottom: 3rem;
   }
 
   .btn {
@@ -950,8 +951,39 @@ nav ul li a.current {
   }
 
   .image-box1 img, .image-box2 img {
-    max-width: 380px;
+    max-width: 320px;
     height: auto;
+  }
+
+  .project-description1, .project-description2 {
+    margin-left: 20px;
+    padding-left: 0;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-lg-8 {
+      max-width: 100%;
+  }
+
+  .contentContainer, .buttonContainer {
+    width: 90%;
+  }
+
+  .imageContainer {
+    padding: 0 10px;
+    max-width: 225px;
+  }
+
+  .img-fluid {
+    max-width: 225px;
+  }
+
+  .textContainer {
+    margin-left: 10px;
+    align-self: center;
   }
 
   #content-list {
@@ -1023,7 +1055,6 @@ nav ul li a.current {
 
   .projects * {
     margin: 0 auto;
-
   }
 
   .slider-div {
@@ -1047,9 +1078,19 @@ nav ul li a.current {
     padding: 10px 0;
   }
 
+  .project-description1 img, .project-description2 img, .project-description1 p, .project-description2 p,
   .project-description1 h4, .project-description2 h4 {
-    padding: 10px 0;
+    margin-bottom: 20px;
   }
+
+  .modal-dialog {
+    max-width: 90%;
+}
+
+.contentContainer, .buttonContainer {
+  width: 95%;
+  flex-direction: row;
+}
 
   .image-box2 {
     order: 3;
@@ -1155,7 +1196,6 @@ nav ul li a.current {
 
   #header-box {
     height: 100px;
-
 }
 
   header nav ul {
@@ -1202,6 +1242,37 @@ nav ul li a.current {
   .projects-top {
     padding-top: 25px;
 
+  }
+
+  .modal-dialog {
+    margin: 0 auto;
+}
+
+  .col-lg-8 {
+      max-width: 90%;
+  }
+
+  .contentContainer, .buttonContainer {
+    width: 95%;
+    flex-direction: column;
+  }
+
+  .imageContainer {
+      margin: 0 auto;
+  }
+
+  .mb-5, .my-5 {
+      margin-bottom: 0;
+  }
+
+  .textContainer {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+  .btn {
+    margin: 0 auto;
   }
 
   .content {
