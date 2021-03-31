@@ -154,12 +154,19 @@
                       <a name="contact"></a>
                       <h2>Get in touch today!</h2>
                     </div>
-                    <form class="contact-form" action="index.html" method="post">
+
+
+
+
+
+
+
+                    <form id="contactForm" name="sentMessage" novalidate="novalidate">
                       Email
-                      <input type="text" class="email" name="email" placeholder="Type your e-mail">
+                      <input type="email" class="email" id="email" name="email" required="required" data-validation-required-message="Please enter your email address." placeholder="Type your e-mail address">
                       Message
-                      <textarea name="message" class="message" rows="8" cols="80" placeholder="Type your message or any questions..."></textarea>
-                      <input type="button" class="form-button" value="Send">
+                      <textarea name="message" class="message" id="message" rows="8" cols="80" required="required" data-validation-required-message="Please enter a message." placeholder="Type your message or any questions..."></textarea>
+                      <input type="button" class="form-button" id="sendMessageButton" type="submit" value="Send">
                     </form>
 
                     <div class="contact-paragraph">
@@ -234,6 +241,8 @@
 
                 <!-- Bootstrap core JS-->
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-
+                <!-- Contact form JS-->
+                <script src="assets/mail/jqBootstrapValidation.js"></script>
+                <script src="assets/mail/contact_me.js"></script>
               </body>
               </html>

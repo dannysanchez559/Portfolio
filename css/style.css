@@ -702,7 +702,7 @@ nav ul li a.current {
   background-image: url("../images/contact background design.svg");
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: 70% 700px;
+  background-size: 72% 700px;
   height: 700px;
 }
 
@@ -740,7 +740,7 @@ nav ul li a.current {
   grid-row-end: 1;
 }
 
-.contact-form {
+#contactForm {
   grid-area: f;
   grid-row-start: 2;
   grid-row-end: 3;
@@ -756,10 +756,15 @@ nav ul li a.current {
   padding: 20px;
 }
 
-.contact-form * {
+#contactForm * {
   box-sizing: border-box;
   margin: 5px 0 5px 0;
   padding-left: 10px;
+}
+
+#contactForm .form-button {
+  padding: 9px 34px;
+
 }
 
 .email {
@@ -860,7 +865,6 @@ nav ul li a.current {
 
 .form-button {
   background-color: #3756C3;
-  padding: 9px 34px;
   align-self: flex-end;
 }
 
@@ -1098,7 +1102,7 @@ nav ul li a.current {
     align-items: center;
   }
 
-  .contact-form {
+  #contactForm {
     order: 2;
     max-width: 600px;
   }
@@ -1256,7 +1260,7 @@ nav ul li a.current {
     max-width: 335px;
   }
 
-  .contact-form {
+  #contactForm {
     max-width: 335px;
     margin-top: 50px;
     margin-bottom: 30px;
