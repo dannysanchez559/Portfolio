@@ -163,10 +163,12 @@
 
                     <form id="contactForm" name="sentMessage" novalidate="novalidate">
                       Email
-                      <input type="email" class="email" id="email" name="email" required="required" data-validation-required-message="Please enter your email address." placeholder="Type your e-mail address">
+                      <input class="email" id="email" type="email" placeholder="Email address" required="required" data-validation-required-message="Please enter your email address.">
                       Message
-                      <textarea name="message" class="message" id="message" rows="8" cols="80" required="required" data-validation-required-message="Please enter a message." placeholder="Type your message or any questions..."></textarea>
-                      <input type="button" class="form-button" id="sendMessageButton" type="submit" value="Send">
+                      <textarea id="message" rows="8" cols="80" placeholder="Enter a Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+
+                      <div id="success"></div>
+                      <button class="form-button" id="sendMessageButton" type="submit">Send</button>
                     </form>
 
                     <div class="contact-paragraph">
