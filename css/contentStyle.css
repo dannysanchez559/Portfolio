@@ -84,3 +84,31 @@ main {
 .indent {
    text-indent: 5%;
 }
+
+
+/* ------- RESPONSIVE LAYOUT ------- */
+
+/* IPAD Mini 768px */
+@media only screen and (max-width: 768px) {
+
+  .pageContainer {
+    /* border: 1px solid red; */
+    max-width: 668px;
+  }
+}
+
+/* iPhone 8 Plus 414px*/
+@media only screen and (max-width: 414px) {
+  .pageContainer {
+    /* border: 1px solid red; */
+    max-width: 350px;
+  }
+}
+
+/* iPhone 8 375px */
+@media only screen and (max-width: 414px) {
+  .pageContainer {
+    /* border: 1px solid red; */
+    max-width: 325px;
+  }
+}
