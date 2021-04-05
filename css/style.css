@@ -696,6 +696,10 @@ nav ul li a.current {
   padding-bottom: 5px;
 }
 
+.content-box h3, .content-box p {
+  align-self: flex-start;
+}
+
 .bottom-container {
   box-sizing: border-box;
   background-color: #2944A3;
