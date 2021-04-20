@@ -520,8 +520,13 @@ nav ul li a.current {
   .buttonContainer {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+  }
+
+  .buttonContainer button {
+    margin-top: 10px;
   }
 
   .img-fluid {
@@ -1112,7 +1117,7 @@ form select {
     max-width: 90%;
 }
 
-.contentContainer, .buttonContainer {
+.contentContainer {
   width: 95%;
   flex-direction: row;
 }
